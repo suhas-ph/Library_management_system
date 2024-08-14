@@ -494,22 +494,6 @@ class Management:
             for list in rows:
                 self.tree.insert("", 'end', text=(rows.index(list)+1), values=(list[0], list[1], list[2], list[3], list[4], list[5]))
     
-    # # Function 18: No longer required
-    # def UpdateBook(self):
-    #     x = self.tree.selection()
-    #     y=self.tree.item(x)['values']
-    #     if y=="":
-    #         messagebox.showerror('Error!', "Please select a record")
-    #     else:
-    #         try:
-    #             connection = pymysql.connect(host=self.host, user=self.user, password=self.password, database=self.database)
-    #             curs = connection.cursor()
-    #             curs.execute("select * from book_list where book_id=%s", y[0])
-    #             row=curs.fetchone()
-    #             # self.GetData_to_Update(row)
-    #             connection.close()
-    #         except Exception as e:
-    #             messagebox.showerror("Error!",f"Error due to {str(e)}",parent=self.window)
     
 
 
@@ -543,34 +527,6 @@ class Management:
 
         self.submit_bt_1 = Button(self.frame_1, text='Submit', font=(cs.font_1, 12), bd=2, command=self.Submit,cursor="hand2", bg=cs.color_2,fg=cs.color_3).place(x=310,y=459,width=100)
 
-    # # Function 20: No longer required
-    # def GetDataforUpdate(self):
-    #     self.ClearScreen()
-
-    #     book_id = Label(self.frame_1, text="Book Id", font=(cs.font_2, 15, "bold"), bg=cs.color_1).place(x=220,y=30)
-    #     self.id_entry = Entry(self.frame_1, bg=cs.color_4, fg=cs.color_3)
-    #     self.id_entry.place(x=220,y=60, width=300)
-
-    #     book_name = Label(self.frame_1, text="Book Name", font=(cs.font_2, 15, "bold"), bg=cs.color_1).place(x=220,y=100)
-    #     self.bookname_entry = Entry(self.frame_1, bg=cs.color_4, fg=cs.color_3)
-    #     self.bookname_entry.place(x=220,y=130, width=300)
-
-    #     author = Label(self.frame_1, text="Author", font=(cs.font_2, 15, "bold"), bg=cs.color_1).place(x=220,y=170)
-    #     self.author_entry = Entry(self.frame_1, bg=cs.color_4, fg=cs.color_3)
-    #     self.author_entry.place(x=220,y=200, width=300)
-
-    #     edition = Label(self.frame_1, text="Edition", font=(cs.font_2, 15, "bold"), bg=cs.color_1).place(x=220,y=240)
-    #     self.edition_entry = Entry(self.frame_1, bg=cs.color_4, fg=cs.color_3)
-    #     self.edition_entry.place(x=220,y=270, width=300)
-
-    #     price = Label(self.frame_1, text="Price", font=(cs.font_2, 15, "bold"), bg=cs.color_1).place(x=220,y=310)
-    #     self.price_entry = Entry(self.frame_1, bg=cs.color_4, fg=cs.color_3)
-    #     self.price_entry.place(x=220,y=340, width=300)
-
-    #     quantity = Label(self.frame_1, text="Quantity", font=(cs.font_2, 15, "bold"), bg=cs.color_1).place(x=220,y=380)
-    #     self.qty_entry = Entry(self.frame_1, bg=cs.color_4, fg=cs.color_3)
-    #     self.qty_entry.place(x=220,y=410, width=300)
-    #     self.submit_bt_1 = Button(self.frame_1, text='Submit', font=(cs.font_1, 12), bd=2, command=self.Submit,cursor="hand2", bg=cs.color_2,fg=cs.color_3).place(x=310,y=459,width=100)
 
 
 
