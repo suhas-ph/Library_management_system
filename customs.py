@@ -1,3 +1,4 @@
+#colour scheme for the gui can change according to ur preference
 color_1 = "#262A76"
 color_2 = "#B6B0FF"
 color_3 = "black"
